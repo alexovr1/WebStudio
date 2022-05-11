@@ -1,11 +1,15 @@
 .logo {
-    font-family: Raleway, Arial, sans-serif;
-    color: var(--accent-text-color);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    margin-right: 93px;
+        font-family: $accentfont;
+        color: var(--accent-text-color);
+        @include font (700, 24px, 1.16, 0.03em);
+        @include media-tablet {
+             margin-right: 88px;
+        }
+        @include media-desktop {
+            margin-right: 93px;
+            @include font (700, 26px, 1.19, 0.03em);
+        }
+
 }
 
 .logo__text--black {

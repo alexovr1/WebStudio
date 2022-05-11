@@ -1,11 +1,8 @@
 .btn {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    @include font (700, 16px, 1.88, 0.06em);
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: 0.06em;
     color: var(--third-text-color);
     background-color: var(--accent-text-color);
     cursor: pointer;

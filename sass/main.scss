@@ -1,8 +1,9 @@
 @import './utils/variables';
+@import './utils/mixins';
+@import './utils/placefolders';
 @import './utils/reset';
 @import './utils/global-styles';
 @import './components/logo';
-@import './utils/mixins';
 @import './components/backdrop';
 @import './components/modal';
 @import './components/buttons';

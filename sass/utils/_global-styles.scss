@@ -1,24 +1,36 @@
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include media-phone {
+            width: 480px;
+        };
+        @include media-tablet {
+            width: 768px;
+        };
+        @include media-desktop {
+            width: 1200px;
+        }
+    }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include media-desktop {
+            padding-top: 94px;
+                padding-bottom: 94px;
+        }
 }
 
 .title {
+    margin-bottom: 50px;
     font-weight: bold;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
-    margin-bottom: 50px;
 }
 
 .visually-hidden {
