@@ -1,4 +1,7 @@
 .what-doing {
+    @include max1199p {
+display: none;
+    }
     padding-top: 0;
     &__item-descr {
         font-weight: 700;

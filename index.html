@@ -15,7 +15,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <title>WebStudio</title>
-
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
@@ -26,35 +25,68 @@
         <a href="./index.html" class="logo link"
           >Web<span class="logo__text--black">Studio</span></a
         >
-        <nav class="header__nav">
-          <ul class="nav-list list">
-            <li class="nav-list__item">
-              <a href="./index.html" class="nav-list__link nav-list__link--accent link">Студия</a>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40px" height="40px">
+            <use class="" href="./images/icons.svg#icon-menu-mob"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container">
+          <button type="button" class="menu-toggle js-close-menu">
+            <svg width="40px" height="40px">
+              <use class="" href="./images/icons.svg#icon-close-mob"></use>
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <ul class="nav-list list">
+              <li class="nav-list__item">
+                <a href="./index.html" class="nav-list__link nav-list__link--accent link">Студия</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="./portfolio.html" class="nav-list__link link">Портфолио</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="" class="nav-list__link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-cl list">
+            <li class="header-cl__item">
+              <a href="mailto:info@devstudio.com" class="header-cl__link header-cl__link--s link"
+                ><svg class="email-icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-email"></use></svg
+                >info@devstudio.com</a
+              >
             </li>
-            <li class="nav-list__item">
-              <a href="./portfolio.html" class="nav-list__link link">Портфолио</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="" class="nav-list__link link">Контакты</a>
+            <li class="header-cl__item">
+              <a href="tel:+380961111111" class="header-cl__link header-cl__link--accent link"
+                ><svg class="phone-icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header-cl list">
-          <li class="header-cl__item">
-            <a href="mailto:info@devstudio.com" class="header-cl__link link"
-              ><svg class="email-icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-email"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="header-cl__item">
-            <a href="tel:+380961111111" class="header-cl__link link"
-              ><svg class="phone-icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-phone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <div class="header__soc">
+            <ul class="header__soc-link-list list">
+              <li class="header__soc-item">
+                <a href="" class="header__soc-link link">Instagram</a>
+              </li>
+              <li class="header__soc-item">
+                <a href="" class="header__soc-link link">Twitter</a>
+              </li>
+              <li class="header__soc-item">
+                <a href="" class="header__soc-link link">Facebook</a>
+              </li>
+              <li class="header__soc-item">
+                <a href="" class="header__soc-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Главный контент -->
@@ -119,7 +151,7 @@
         </div>
       </section>
       <!-- Чем мы занимаемся -->
-      <!-- <section class="what-doing section">
+      <section class="what-doing section">
         <div class="container">
           <h2 class="what-doing-title title">Чем мы занимаемся</h2>
           <ul class="features-list list">
@@ -153,9 +185,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Наша команда -->
-      <!-- <section class="our-team section">
+      <section class="our-team section">
         <div class="container">
           <h2 class="our-team-title title">Наша команда</h2>
           <ul class="features-list list">
@@ -293,7 +325,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- клиенты -->
       <!-- <section class="our-clients section">
         <div class="container">
@@ -489,5 +521,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

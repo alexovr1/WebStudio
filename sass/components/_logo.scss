@@ -1,4 +1,8 @@
 .logo {
+    @include max767p {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
         font-family: $accentfont;
         color: var(--accent-text-color);
         @include font (700, 24px, 1.16, 0.03em);
