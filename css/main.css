@@ -494,12 +494,6 @@ textarea {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .header__contacts {
-    width: 100%;
-  }
-}
-
 .header-cl {
   font-weight: 500;
   font-size: 34px;
@@ -1014,10 +1008,12 @@ textarea {
     background-color: var(--main-backgroud-color);
     z-index: 999;
     transform: translateX(100%);
-    transition: transform var(--time-fuction-anim);
+    opacity: 0;
+    transition: var(--time-fuction-anim);
   }
   .menu-container.is-open {
     transform: translateX(0);
+    opacity: 1;
   }
   .menu-container .menu-toggle {
     position: absolute;
