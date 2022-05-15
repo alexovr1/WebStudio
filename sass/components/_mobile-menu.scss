@@ -41,6 +41,9 @@
       right: 15px;
     }
   }
+  @include media-tablet {
+    width: 100%;
+  }
   &-parts {
     display: flex;
     height: 100%;
@@ -50,7 +53,7 @@
       justify-content: flex-start;
     }
     @include media-tablet {
-      @include center-flex($jc: flex-start);
+      @include center-flex($jc: space-between);
     }
   }
 }
