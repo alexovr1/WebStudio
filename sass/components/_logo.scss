@@ -1,25 +1,20 @@
 .logo {
-    @include max767p {
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-        font-family: $accentfont;
-        color: var(--accent-text-color);
-        @include font (700, 24px, 1.16, 0.03em);
-        @include media-tablet {
-             margin-right: 88px;
-        }
-        @include media-desktop {
-            margin-right: 93px;
-            @include font (700, 26px, 1.19, 0.03em);
-        }
-
+  font-family: $accentfont;
+  color: var(--accent-text-color);
+  @include font(700, 24px, 1.16, 0.03em);
+  @include media-tablet {
+    margin-right: 88px;
+  }
+  @include media-desktop {
+    margin-right: 93px;
+    @include font(700, 26px, 1.19, 0.03em);
+  }
 }
 
 .logo__text--black {
-    color: #000000;
+  color: #000000;
 }
 
 .logo__text--white {
-    color: var(--third-text-color);
+  color: var(--third-text-color);
 }

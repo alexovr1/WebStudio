@@ -1,29 +1,50 @@
 .hero {
-padding-top: 118px;
-padding-bottom: 118px;
-background-color: var(--second-backgroud-color);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-margin: 0 auto;
-    @include media-desktop {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero-bg.jpg);
-                max-width: 1600px;
-        }
+  margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: var(--second-backgroud-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/mob/header_img.jpg);
+  @include bgimg2x {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/mob/header_img@2x.jpg);
+  }
+  max-width: 480px;
+  @include media-tablet {
+    @include bgimg2x {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/tab/header_img@2x.jpg);
+    }
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/tab/header_img.jpg);
+    max-width: 768px;
+  }
+  @include media-desktop {
+    @include bgimg2x {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/desk/img@2x.jpg);
+    }
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/desk/img.jpg);
+    max-width: 1600px;
+  }
 }
 
 .hero__title {
-    margin: 0 auto 30px;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--third-text-color);
-    @include font (900, 26px, 1.62, 0.06em);
-    @include media-desktop {
-            @include font (900, 44px, 1.36, 0.06em);
-            width: 696px;
-    }
-
+  margin: 0 auto 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+  @include font(900, 26px, 1.62, 0.06em);
+  @include media-desktop {
+    @include font(900, 44px, 1.36, 0.06em);
+    width: 696px;
+  }
 }

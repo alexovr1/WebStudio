@@ -1,14 +1,14 @@
 body {
-    margin: 0;
-    font-family: $mainfont;
-    background-color: var(--main-backgroud-color);
-    color: var(--main-text-color);
-    @include font;
+  margin: 0;
+  font-family: $mainfont;
+  background-color: var(--main-backgroud-color);
+  color: var(--main-text-color);
+  @include font(null);
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 h1,
@@ -18,20 +18,20 @@ h4,
 h5,
 p,
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }

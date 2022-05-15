@@ -24,37 +24,85 @@
         <a href="./index.html" class="logo link"
           >Web<span class="logo__text--black">Studio</span></a
         >
-        <nav class="header__nav">
-          <ul class="nav-list list">
-            <li class="nav-list__item">
-              <a href="./index.html" class="nav-list__link link">Студия</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="./portfolio.html" class="nav-list__link nav-list__link--accent link"
-                >Портфолио</a
-              >
-            </li>
-            <li class="nav-list__item">
-              <a href="" class="nav-list__link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="header-cl list">
-          <li class="header-cl__item">
-            <a href="mailto:info@devstudio.com" class="header-cl__link link"
-              ><svg class="email-icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-email"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="header-cl__item">
-            <a href="tel:+380961111111" class="header-cl__link link"
-              ><svg class="phone-icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-phone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40px" height="40px">
+            <use class="" href="./images/icons.svg#icon-menu-mob"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button type="button" class="menu-toggle js-close-menu">
+            <svg width="40px" height="40px">
+              <use class="" href="./images/icons.svg#icon-close-mob"></use>
+            </svg>
+          </button>
+          <div class="menu-container-parts mobile-menu">
+            <nav class="header__nav">
+              <ul class="nav-list list">
+                <li class="nav-list__item">
+                  <a href="./index.html" class="nav-list__link link">Студия</a>
+                </li>
+                <li class="nav-list__item">
+                  <a href="./portfolio.html" class="nav-list__link nav-list__link--accent link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="nav-list__item">
+                  <a href="" class="nav-list__link link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__contacts">
+              <ul class="header-cl list">
+                <li class="header-cl__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="header-cl__link header-cl__link--s link"
+                    ><svg class="email-icon" width="16" height="12">
+                      <use href="./images/icons.svg#icon-email"></use></svg
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="header-cl__item">
+                  <a href="tel:+380961111111" class="header-cl__link header-cl__link--accent link"
+                    ><svg class="phone-icon" width="10" height="16">
+                      <use href="./images/icons.svg#icon-phone"></use></svg
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+              <div class="header__soc">
+                <ul class="header__soc-link-list list">
+                  <li class="header__soc-item">
+                    <a href="" class="header__soc-link link">Instagram</a>
+                  </li>
+                  <!-- <li class="header__soc-item">
+                <div class="header__soc-line"></div>
+              </li> -->
+                  <li class="header__soc-item">
+                    <a href="" class="header__soc-link link">Twitter</a>
+                  </li>
+                  <!-- <li class="header__soc-item">
+                <div class="header__soc-line"></div>
+              </li> -->
+                  <li class="header__soc-item">
+                    <a href="" class="header__soc-link link">Facebook</a>
+                  </li>
+                  <!-- <li class="header__soc-item">
+                <div class="header__soc-line"></div>
+              </li> -->
+                  <li class="header__soc-item">
+                    <a href="" class="header__soc-link link">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Главный контент -->
@@ -85,7 +133,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img src="./images/img-8-progressive.jpeg" alt="Веб-сайт" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-7.jpg 1x, ./images/desk/img@2x-7.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-4.jpg 1x, ./images/tab/img@2x-4.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-4.jpg 1x, ./images/mob/img@2x-4.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-4.jpg" alt="Веб-сайт" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -101,11 +163,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img
-                    src="./images/img-9-progressive.jpeg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-8.jpg 1x, ./images/desk/img@2x-8.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-5.jpg 1x, ./images/tab/img@2x-5.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-5.jpg 1x, ./images/mob/img@2x-5.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-5.jpg" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -121,7 +193,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img src="./images/img-10-progressive.jpeg" alt="Ресторан Seafood" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-9.jpg 1x, ./images/desk/img@2x-9.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-6.jpg 1x, ./images/tab/img@2x-6.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-6.jpg 1x, ./images/mob/img@2x-6.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-6.jpg" alt="Ресторан Seafood" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -137,7 +223,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img src="./images/img-11-progressive.jpeg" alt="Головные наушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-10.jpg 1x, ./images/desk/img@2x-10.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-7.jpg 1x, ./images/tab/img@2x-7.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-7.jpg 1x, ./images/mob/img@2x-7.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-7.jpg" alt="Головные наушники" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -153,11 +253,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img
-                    src="./images/img-12-progressive.jpeg"
-                    alt="Белая и серая коробка"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-11.jpg 1x, ./images/desk/img@2x-11.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-8.jpg 1x, ./images/tab/img@2x-8.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-8.jpg 1x, ./images/mob/img@2x-8.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-8.jpg" alt="Белая и серая коробка" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -173,7 +283,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img src="./images/img-13-progressive.jpeg" alt="Веб-сайт" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-12.jpg 1x, ./images/desk/img@2x-12.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-9.jpg 1x, ./images/tab/img@2x-9.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-9.jpg 1x, ./images/mob/img@2x-9.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-9.jpg" alt="Веб-сайт" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -189,7 +313,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img src="./images/img-14-progressive.jpeg" alt="Разворот книги" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-13.jpg 1x, ./images/desk/img@2x-13.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-10.jpg 1x, ./images/tab/img@2x-10.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-10.jpg 1x, ./images/mob/img@2x-10.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-10.jpg" alt="Разворот книги" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -205,7 +343,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img src="./images/img-15-progressive.jpeg" alt="Бирка" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-14.jpg 1x, ./images/desk/img@2x-14.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-11.jpg 1x, ./images/tab/img@2x-11.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-11.jpg 1x, ./images/mob/img@2x-11.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-11.jpg" alt="Бирка" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -221,11 +373,21 @@
             <li class="examples__item">
               <a href="" class="examples__item-link link">
                 <div class="examples__item-img img">
-                  <img
-                    src="./images/img-16-progressive.jpeg"
-                    alt="Печают на клавиутре ноутбука"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/desk/img-15.jpg 1x, ./images/desk/img@2x-15.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tab/img-12.jpg 1x, ./images/tab/img@2x-12.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mob/img-12.jpg 1x, ./images/mob/img@2x-12.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/mob/img-12.jpg" alt="Печают на клавиутре ноутбука"" />
+                  </picture>
                   <p class="examples__item-img-cover">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -317,5 +479,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

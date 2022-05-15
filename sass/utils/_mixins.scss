@@ -1,44 +1,54 @@
-@mixin center-flex ($d:flex, $jc:center, $ai:center) {
-    display: $d;
-    justify-content: $jc;
-    align-items: $ai;    
-};
-
-@mixin font ($fw:normal , $fs:14px, $lh:1.14, $ls:0.03em) {
-    font-weight: $fw;
-    font-size: $fs;
-    line-height: $lh;
-    letter-spacing: $ls;
-};
-
-@mixin media-phone {
-    @media screen and (min-width: 480px) {
-        @content;
-    }
-};
-
-@mixin media-tablet {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-};
-
-@mixin media-desktop {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
-};
-
-@mixin max767p {
-    @media screen and (max-width:767px) {
-            @content;
-        }
-};
-
-@mixin max1199p {
-    @media screen and (max-width:1199px) {
-        @content;
-    }
+@mixin center-flex($d: flex, $jc: center, $ai: center) {
+  display: $d;
+  justify-content: $jc;
+  align-items: $ai;
 }
 
-;
+@mixin font($fw: normal, $fs: 14px, $lh: 1.14, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin media-phone {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin max767p {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin max1199p {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin max480p {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin bgimg2x {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}

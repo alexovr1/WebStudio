@@ -1,53 +1,53 @@
 .container {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 15px;
-        padding-right: 15px;
-        @include media-phone {
-            width: 480px;
-        };
-        @include media-tablet {
-            width: 768px;
-        };
-        @include media-desktop {
-            width: 1200px;
-        }
-    }
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include media-phone {
+    width: 480px;
+  }
+  @include media-tablet {
+    width: 768px;
+  }
+  @include media-desktop {
+    width: 1200px;
+  }
+}
 
 .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    @include media-desktop {
-            padding-top: 94px;
-                padding-bottom: 94px;
-        }
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include media-desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .title {
-    margin-bottom: 50px;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--main-text-color);
+  @include max1199p {
+    margin-bottom: 30px;
+  }
+  @include font(700, 36px, 1.16);
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--main-text-color);
 }
 
 .visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
