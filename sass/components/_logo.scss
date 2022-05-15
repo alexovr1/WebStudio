@@ -9,6 +9,9 @@
     margin-right: 93px;
     @include font(700, 26px, 1.19, 0.03em);
   }
+  &--nomargrigth {
+    margin-right: 0;
+  }
 }
 
 .logo__text--black {

@@ -70,12 +70,16 @@
 }
 
 .header-cl {
+  color: var(--second-text-color);
   @include font(500, 34px, 1.18, 0.02em);
   @include max767p {
     flex-direction: column-reverse;
     margin-bottom: 64px;
     &__item:first-child .header-cl__link {
       @include font(500, 24px, 1.17, 0.02em);
+    }
+    &__item:last-child {
+      color: var(--accent-text-color);
     }
   }
   @include max1199p {
@@ -84,7 +88,7 @@
     margin-left: auto;
   }
   &__link {
-    color: var(--second-text-color);
+    color: inherit;
     transition: color var(--time-fuction-anim);
     @include media-tablet {
       @include center-flex;
@@ -95,8 +99,9 @@
       color: var(--accent-text-color);
       fill: currentColor;
     }
+
     &--accent {
-      color: var(--accent-text-color);
+      // color: var(--accent-text-color);
     }
   }
   @include media-desktop {
