@@ -18,6 +18,10 @@
   @include max1199p {
     max-width: 450px;
   }
+  @include media-desktop {
+    width: 528px;
+    min-height: 581px;
+  }
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) translateY(100%) scale(0.1);
   }

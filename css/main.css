@@ -124,6 +124,10 @@ textarea {
   visibility: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .logo {
   font-family: Raleway, Verdana, sans-serif;
   color: var(--accent-text-color);
@@ -188,6 +192,12 @@ textarea {
 @media screen and (max-width: 1199px) {
   .modal {
     max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
   }
 }
 .backdrop.is-hidden .modal {
