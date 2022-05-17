@@ -6,19 +6,23 @@
       display: block;
     }
     @include media-desktop {
-      @include center-flex(flex, center, baseline);
+      @include center-flex($ai: baseline);
     }
     &__tablet {
       @include media-tablet {
         @include center-flex($jc: space-around, $ai: baseline);
       }
+      // @include media-desktop {
+      //   @include center-flex($jc: flex-start);
+      // }
     }
   }
   &__nav {
-    @include max767p {
-      width: 100%;
+    @include media-desktop {
+      width: 231px;
+      margin-right: 70px;
     }
-    width: 316px;
+    // width: 316px;
   }
   &__logo {
     margin-bottom: 20px;

@@ -11,6 +11,10 @@
   --time-fuction-anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.our-clients__item, .features-list__item--3colums, .features-list__item {
+  flex: 1 1 auto;
+}
+
 body {
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
@@ -24,6 +28,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -307,10 +312,11 @@ textarea {
   color: #188ce8;
 }
 .modal__agreements-icon {
+  margin-right: 8px;
+  min-width: 16px;
   border: 2px solid var(--main-text-color);
   border-radius: 2px;
   fill: transparent;
-  margin-right: 8px;
   transition: background-color var(--time-fuction-anim), fill var(--time-fuction-anim), border var(--time-fuction-anim);
 }
 .modal__agreements-check:checked + .modal__agreements-icon {
@@ -661,13 +667,13 @@ textarea {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desk/img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desk/hero.jpg);
     max-width: 1600px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desk/img@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desk/hero@2x.jpg);
   }
 }
 
@@ -680,9 +686,11 @@ textarea {
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
+  max-width: 360px;
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
+    max-width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -694,14 +702,24 @@ textarea {
 @media screen and (min-width: 768px) {
   .features-list {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 30px;
   }
 }
 @media screen and (min-width: 768px) {
   .features-list__item {
-    flex-basis: calc(50% - 15px);
+    flex-basis: calc(50% - 30px);
   }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    flex-basis: calc(25% - 90px);
+  }
+}
+.features-list__item--3colums {
+  flex-basis: calc(33.3333333333% - 60px);
 }
 .features-list__item-img {
   display: flex;
@@ -718,8 +736,12 @@ textarea {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .features-item-title {
+    text-align: center;
+  }
 }
 
 .features-item-subtitle {
@@ -748,11 +770,11 @@ textarea {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -815,17 +837,15 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: calc(50% - 15px);
+}
+@media screen and (max-width: 767px) {
+  .our-clients__item {
+    flex-basis: calc(50% - 30px);
+  }
 }
 @media screen and (min-width: 768px) {
   .our-clients__item {
-    flex-basis: calc(33.3333333333% - 20px);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .our-clients__item {
-    flex-wrap: nowrap;
-    flex-basis: calc(16.6666666667% - 10px);
+    flex-basis: calc(33.3333333333% - 60px);
   }
 }
 
@@ -871,12 +891,10 @@ textarea {
     align-items: baseline;
   }
 }
-.footer__nav {
-  width: 316px;
-}
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .footer__nav {
-    width: 100%;
+    width: 231px;
+    margin-right: 70px;
   }
 }
 .footer__logo {
@@ -1114,7 +1132,7 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .examples__item {
-    flex-basis: calc(50% - 15px);
+    flex-basis: calc(50% - 30px);
   }
   .examples__item:first-child .examples__item-description {
     padding-bottom: 56px;
@@ -1122,7 +1140,7 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .examples__item {
-    flex-basis: calc(33.3333333333% - 2 * var(--set-gap));
+    flex-basis: calc(33.3333333333% - 60px);
   }
 }
 @media screen and (max-width: 767px) {

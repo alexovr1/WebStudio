@@ -119,10 +119,11 @@
     }
   }
   &__agreements-icon {
+    margin-right: 8px;
+    min-width: 16px;
     border: 2px solid var(--main-text-color);
     border-radius: 2px;
     fill: transparent;
-    margin-right: 8px;
     transition: background-color var(--time-fuction-anim), fill var(--time-fuction-anim),
       border var(--time-fuction-anim);
     .modal__agreements-check:checked + & {

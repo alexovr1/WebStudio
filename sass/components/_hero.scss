@@ -27,12 +27,12 @@
   @include media-desktop {
     @include bgimg2x {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/desk/img@2x.jpg);
+        url(../images/desk/hero@2x.jpg);
     }
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/desk/img.jpg);
+      url(../images/desk/hero.jpg);
     max-width: 1600px;
   }
 }
@@ -43,7 +43,9 @@
   text-transform: uppercase;
   color: var(--third-text-color);
   @include font(900, 26px, 1.62, 0.06em);
+  max-width: 360px;
   @include media-desktop {
+    max-width: 696px;
     @include font(900, 44px, 1.36, 0.06em);
     width: 696px;
   }
