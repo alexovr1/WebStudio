@@ -3,7 +3,6 @@
     @include center-flex;
     flex-wrap: wrap;
     gap: $gap;
-    // margin: calc(-1 * var(--set-gap));
   }
   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
@@ -18,12 +17,16 @@
     @include media-desktop {
       flex-basis: calc(100% / 4 - $gap * 3);
     }
+    &:not(:last-child) {
+      @include max480p {
+        margin-bottom: 30px;
+      }
+    }
     &--3colums {
       @extend %flexitem;
       flex-basis: calc(100% / 3 - $gap * 2);
     }
   }
-
   &__item-img {
     @include center-flex;
     margin-bottom: 30px;
